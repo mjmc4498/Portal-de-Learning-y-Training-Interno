@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Aprendizaje</title>
+    <link rel="stylesheet" href="css/portal.css">
+</head>
+<body>
+    <div class="portal-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Portal</h2>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#" class="active" data-section="dashboard">Dashboard</a></li>
+                    <li><a href="#" data-section="mis-cursos">Mis Cursos</a></li>
+                    <li><a href="#" data-section="catalogo">Catálogo</a></li>
+                    <li><a href="#" data-section="certificaciones">Certificaciones</a></li>
+                    <li><a href="#" data-section="perfil">Perfil</a></li>
+                    <li><a href="#" data-section="admin">Panel Administrativo</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Dashboard</h1>
+                <div class="user-info">
+                    <span>Bienvenido, <span id="user-name">Usuario</span></span>
+                    <button id="logout-btn" class="btn btn-logout">Cerrar Sesión</button>
+                </div>
+            </header>
+            <section id="dashboard" class="content-section active">
+                <!-- El contenido se generará dinámicamente -->
+            </section>
+            <section id="mis-cursos" class="content-section" style="display: none;">
+                <!-- El contenido se generará dinámicamente -->
+            </section>
+            <section id="catalogo" class="content-section" style="display: none;">
+                <!-- El contenido se generará dinámicamente -->
+            </section>
+            <section id="certificaciones" class="content-section" style="display: none;">
+                <!-- El contenido se generará dinámicamente -->
+            </section>
+            <section id="perfil" class="content-section" style="display: none;">
+                <!-- El contenido se generará dinámicamente -->
+            </section>
+            <section id="admin" class="content-section" style="display: none;">
+                <h2>Panel Administrativo</h2>
+                <div class="admin-panel">
+                    <h3>Importar Cursos</h3>
+                    <p>Selecciona un archivo .xlsx o .csv para cargar los cursos.</p>
+                    <input type="file" id="import-file" accept=".xlsx, .csv">
+                    <button id="import-btn" class="btn">Importar</button>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/model.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
